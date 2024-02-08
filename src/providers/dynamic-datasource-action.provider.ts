@@ -1,4 +1,4 @@
-import { CoreBindings, inject, injectable, Provider } from '@loopback/core';
+import {CoreBindings, inject, injectable, Provider} from '@loopback/core';
 import {
   asMiddleware,
   ExpressRequestHandler,
@@ -9,8 +9,8 @@ import {
   RestApplication,
   RestMiddlewareGroups,
 } from '@loopback/rest';
-import { RepositoryBindings, RepositoryTags } from '@loopback/repository';
-import { DynamicDatasourceBindings } from '../keys';
+import {RepositoryBindings, RepositoryTags} from '@loopback/repository';
+import {DynamicDatasourceBindings} from '../keys';
 import {
   DatasourceIdentifierFn,
   DatasourceProviderFn,
@@ -27,7 +27,7 @@ export class DynamicDatasourceActionProvider
     private readonly getDatasourceIdentifier: DatasourceIdentifierFn,
     @inject(DynamicDatasourceBindings.DATASOURCE_PROVIDER)
     private readonly getDatasourceProvider: DatasourceProviderFn,
-  ) { }
+  ) {}
 
   value(): SetupDatasourceFn {
     return async ctx => {
@@ -80,7 +80,7 @@ export class DynamicDatasourceMiddlewareProvider
   constructor(
     @inject(DynamicDatasourceBindings.DYNAMIC_DATASOURCE_ACTION)
     private readonly setupDatasource: SetupDatasourceFn,
-  ) { }
+  ) {}
   value(): Middleware {
     return async (ctx, next) => {
       await this.setupDatasource(ctx as RequestContext);
@@ -97,7 +97,7 @@ export class DynamicDatasourceMiddlewareProvider
  * @returns Calls Next Method
  */
 // eslint-disable-next-line @typescript-eslint/no-misused-promises
-export const SetupDataSourceMiddlewareFunction: ExpressRequestHandler = async (
+export const setupDataSourceMiddlewareFunction: ExpressRequestHandler = async (
   req,
   res,
   next,
