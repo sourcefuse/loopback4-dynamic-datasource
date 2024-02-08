@@ -97,7 +97,7 @@ export class DynamicDatasourceMiddlewareProvider
  * @returns Calls Next Method
  */
 // eslint-disable-next-line @typescript-eslint/no-misused-promises
-export const SetupDataSourceMiddlewareFunction: ExpressRequestHandler = async (
+export const setupDataSourceMiddlewareFunction: ExpressRequestHandler = async (
   req,
   res,
   next,
