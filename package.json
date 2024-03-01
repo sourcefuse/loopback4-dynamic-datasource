@@ -102,6 +102,6 @@
       ],
       "@semantic-release/github"
     ],
-    "repositoryUrl": "git@github.com:sourcefuse/oopBack4-dynamic-datasource.git"
+    "repositoryUrl": "git@github.com:sourcefuse/loopBack4-dynamic-datasource.git"
   }
 }
