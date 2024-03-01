@@ -53,23 +53,23 @@
   "devDependencies": {
     "@loopback/build": "^10.1.5",
     "@loopback/core": "^5.1.5",
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
     "@loopback/eslint-config": "^14.0.5",
     "@loopback/testlab": "^6.1.5",
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^11.0.2",
-    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@semantic-release/npm": "^9.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.9.2",
     "cz-customizable-ghooks": "^2.0.0",
-    "semantic-release": "^23.0.2",
+    "semantic-release": " ^19.0.5",
     "@types/node": "^16.18.70",
     "eslint": "^8.51.0",
-    "husky": "^7.0.1",
+    "husky": "^7.0.4",
     "source-map-support": "^0.5.21",
     "typescript": "~5.2.2"
   },
@@ -86,7 +86,19 @@
       "master"
     ],
     "plugins": [
-      "@semantic-release/commit-analyzer",
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "type": "chore",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
