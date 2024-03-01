@@ -1,6 +1,6 @@
 {
   "name": "loopback4-dynamic-datasource",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An extension to connect to dynamic datasource in a loopback 4 application.",
   "keywords": [
     "loopback-extension",
@@ -46,10 +46,17 @@
     "@loopback/core": "^5.1.5"
   },
   "dependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^13.2.0",
     "@loopback/repository": "^6.1.5",
     "@loopback/rest": "^13.1.5",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@loopback/build": "^10.1.5",
+    "@loopback/core": "^5.1.5",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@loopback/eslint-config": "^14.0.5",
+    "@loopback/testlab": "^6.1.5",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
@@ -60,13 +67,6 @@
     "cz-customizable": "^6.9.2",
     "cz-customizable-ghooks": "^2.0.0",
     "semantic-release": "^23.0.2",
-    "tslib": "^2.0.0"
-  },
-  "devDependencies": {
-    "@loopback/build": "^10.1.5",
-    "@loopback/core": "^5.1.5",
-    "@loopback/eslint-config": "^14.0.5",
-    "@loopback/testlab": "^6.1.5",
     "@types/node": "^16.18.70",
     "eslint": "^8.51.0",
     "husky": "^7.0.1",
