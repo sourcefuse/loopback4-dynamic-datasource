@@ -3,12 +3,18 @@
 We use Visual Studio Code for developing LoopBack and recommend the same to our
 users.
 
+## Setup Commit Hooks
+
+Run the following script to prepare husky after the first time install -
+
+`npm run prepare`
+
 ## VSCode setup
 
 Install the following extensions:
 
- - [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
- - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Development workflow
 
