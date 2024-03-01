@@ -27,7 +27,8 @@
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache",
     "rebuild": "npm run clean && npm run build",
-    "prepublishOnly": "npm run test && npm run lint"
+    "prepublishOnly": "npm run test && npm run lint",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -45,21 +46,62 @@
     "@loopback/core": "^5.1.5"
   },
   "dependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
     "@loopback/repository": "^6.1.5",
     "@loopback/rest": "^13.1.5",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.9.2",
+    "cz-customizable-ghooks": "^2.0.0",
+    "semantic-release": "^23.0.2",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@loopback/build": "^10.1.5",
-    "source-map-support": "^0.5.21",
     "@loopback/core": "^5.1.5",
+    "@loopback/eslint-config": "^14.0.5",
     "@loopback/testlab": "^6.1.5",
     "@types/node": "^16.18.70",
-    "@loopback/eslint-config": "^14.0.5",
     "eslint": "^8.51.0",
+    "husky": "^7.0.1",
+    "source-map-support": "^0.5.21",
     "typescript": "~5.2.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} semantic"
+        }
+      ],
+      "@semantic-release/github"
+    ],
+    "repositoryUrl": "git@github.com:sourcefuse/oopBack4-dynamic-datasource.git"
   }
 }
