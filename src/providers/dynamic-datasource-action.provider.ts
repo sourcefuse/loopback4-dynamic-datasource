@@ -1,4 +1,5 @@
 import {CoreBindings, inject, injectable, Provider} from '@loopback/core';
+import {RepositoryBindings, RepositoryTags} from '@loopback/repository';
 import {
   asMiddleware,
   ExpressRequestHandler,
@@ -7,9 +8,8 @@ import {
   Middleware,
   RequestContext,
   RestApplication,
-  RestMiddlewareGroups,
 } from '@loopback/rest';
-import {RepositoryBindings, RepositoryTags} from '@loopback/repository';
+import {DynamicDatasourceMiddleware} from '../dynamic-datasource.enum';
 import {DynamicDatasourceBindings} from '../keys';
 import {
   DatasourceIdentifierFn,
@@ -70,8 +70,8 @@ export class DynamicDatasourceActionProvider
 
 @injectable(
   asMiddleware({
-    group: RestMiddlewareGroups.MIDDLEWARE,
-    downstreamGroups: RestMiddlewareGroups.FIND_ROUTE,
+    chain: DynamicDatasourceMiddleware.CHAIN,
+    group: DynamicDatasourceMiddleware.GROUP,
   }),
 )
 export class DynamicDatasourceMiddlewareProvider
