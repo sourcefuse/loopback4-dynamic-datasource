@@ -1,4 +1,5 @@
 import {BindingKey, CoreBindings} from '@loopback/core';
+import {Middleware} from '@loopback/rest';
 import {Loopback4DynamicDatasourceComponent} from './component';
 import {
   DatasourceIdentifier,
@@ -6,7 +7,6 @@ import {
   DatasourceProviderFn,
   SetupDatasourceFn,
 } from './types';
-import {Middleware} from '@loopback/rest';
 
 /**
  * Binding keys used by this component.
