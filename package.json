@@ -1,6 +1,6 @@
 {
   "name": "loopback4-dynamic-datasource",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An extension to connect to dynamic datasource in a loopback 4 application.",
   "keywords": [
     "loopback-extension",
