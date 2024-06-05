@@ -30,6 +30,7 @@ module.exports = {
     {name: 'component'},
     {name: 'provider'},
     {name: 'core'},
+    {name: 'deps'},
   ],
 
   appendBranchNameToCommitMessage: true,
