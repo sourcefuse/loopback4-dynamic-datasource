@@ -1,3 +1,5 @@
+## [2.0.1](https://github.com/sourcefuse/loopBack4-dynamic-datasource/compare/v2.0.0...v2.0.1) (2024-12-17)
+
 # [2.0.0](https://github.com/sourcefuse/loopBack4-dynamic-datasource/compare/v1.0.0...v2.0.0) (2024-06-05)
 
 
