@@ -43,20 +43,20 @@
     "!*/__tests__"
   ],
   "peerDependencies": {
-    "@loopback/core": "^6.0.2"
+    "@loopback/core": "^6.1.6"
   },
   "dependencies": {
-    "@loopback/repository": "^7.0.2",
-    "@loopback/rest": "^14.0.2",
+    "@loopback/repository": "^7.0.9",
+    "@loopback/rest": "^14.0.9",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
-    "@loopback/build": "^11.0.2",
-    "@loopback/core": "^6.0.2",
+    "@loopback/build": "^11.0.8",
+    "@loopback/core": "^6.1.6",
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
-    "@loopback/eslint-config": "^15.0.2",
-    "@loopback/testlab": "^7.0.2",
+    "@loopback/eslint-config": "^15.0.4",
+    "@loopback/testlab": "^7.0.8",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
