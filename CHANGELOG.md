@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/sourcefuse/loopBack4-dynamic-datasource/compare/v2.0.1...v3.0.0) (2025-09-08)
+
+
+### Code Refactoring
+
+* **chore:** node and loopback packages version upgrade ([599302b](https://github.com/sourcefuse/loopBack4-dynamic-datasource/commit/599302ba3c368bd29fa9610e00fb74a338776d45)), closes [#23](https://github.com/sourcefuse/loopBack4-dynamic-datasource/issues/23)
+
+
+### BREAKING CHANGES
+
+* **chore:** yes
+
 ## [2.0.1](https://github.com/sourcefuse/loopBack4-dynamic-datasource/compare/v2.0.0...v2.0.1) (2024-12-17)
 
 # [2.0.0](https://github.com/sourcefuse/loopBack4-dynamic-datasource/compare/v1.0.0...v2.0.0) (2024-06-05)
