@@ -8,16 +8,16 @@ jobs:
   Release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           # fetch-depth is necessary to get all tags
           # otherwise lerna can't detect the changes and will end up bumping the versions for all packages
           fetch-depth: 0
           token: ${{ secrets.RELEASE_COMMIT_GH_PAT }}
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
-          node-version: '20.x'
+          node-version: '24.x'
       - name: Configure CI Git User
         run: |
           git config --global user.name $CONFIG_USERNAME
